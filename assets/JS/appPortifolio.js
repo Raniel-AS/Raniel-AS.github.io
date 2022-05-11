@@ -12,9 +12,12 @@ function Menu() {
         btnMenu.addEventListener('click', e => {
             menuMobile.classList.toggle('active');
             btnMenu.classList.toggle('active');
-        })
+        });
+        
     }
-}
+
+    }
+
 let idx = 0;
 
 function carousel() {
