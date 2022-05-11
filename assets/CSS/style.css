@@ -5,13 +5,15 @@
     --cor-branca: rgb(255, 255, 255);
     --cor-preta: rgb(0, 0, 0);
     --cor-principalNoturno: rgb(160, 0, 0);
+    --cor-principalClara: rgb(250, 177, 177);
+    ;
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
+    scroll-behavior: smooth;
 }
 
 html {
@@ -54,8 +56,6 @@ ul {
 .landding-page {
     height: 350vh;
     width: 100vw;
-    scroll-behavior: smooth;
-
 }
 
 #menu-bar {
@@ -68,6 +68,10 @@ ul {
     position: fixed;
     background-color: var(--cor-branca);
     z-index: 10;
+}
+
+#btn-menu {
+    visibility: hidden;
 }
 
 .container-menu {
@@ -370,10 +374,11 @@ ul {
 }
 
 .img-projeto {
-    box-shadow: -0.2rem 0.2rem 0.4rem var(--cor-preta);
+    box-shadow: -0.2rem 0.2rem 1rem var(--cor-preta);
     height: 30vh;
     width: 25vw;
     overflow: hidden;
+    margin-bottom: 1rem;
 }
 
 .carousel {
@@ -517,8 +522,36 @@ a>button {
 
 
 /*MODO TELA NOTURNO*/
+#menu-bar.noturno {
+    background-color: var(--cor-preta);
+    border-color: var(--cor-principalClara);
+}
 
+#menu-bar.noturno .list-menu a li {
+    color: var(--cor-principalClara);
+}
 
+.portifolio-rasa.noturno {
+    background-color: var(--cor-preta);
+}
+
+.modo-tela.noturno {
+    color: yellow;
+}
+
+.portifolio-rasa.noturno .text-apresentacao h3,
+.portifolio-rasa.noturno .text-apresentacao p,
+.portifolio-rasa.noturno .grid-list,
+.portifolio-rasa.noturno #contatos,
+.portifolio-rasa.noturno .items-menu #btn-menu {
+    color: var(--cor-branca);
+    background-color: var(--cor-preta);
+}
+
+.portifolio-rasa.noturno .ficha-tecnica table tr {
+    color: var(--cor-branca);
+    background-color: var(--cor-preta);
+}
 
 /*-------------------------------------------------------------*/
 @media (max-width: 1000px) {
@@ -596,8 +629,8 @@ a>button {
     }
 
     .img-projeto {
-        height: 25vh;
-        width: 30vw;
+        height: 95%;
+        width: 70%;
     }
 
     @keyframes cerebro {
@@ -648,7 +681,7 @@ a>button {
 
     .projetos {
         width: 100%;
-        height: 40%;
+        height: 50%;
     }
 
     .container-projetos {
@@ -693,11 +726,32 @@ a>button {
 }
 
 @media (max-width: 600px) {
+    .container-one {
+        width: 100vw;
+    }
+
+    .my-resumo {
+        width: 100%;
+        padding-left: 2rem;
+    }
+
+    #competencias {
+        width: 100vw;
+    }
+
+    .grid-list {
+        width: 100%;
+    }
 
     .container-two {
         height: 40rem;
+        width: 100vw;
         overflow-y: scroll;
         align-items: flex-start;
+    }
+
+    #tabela-cursos {
+        width: 100%;
     }
 
     .list-tecnica li {
@@ -761,6 +815,7 @@ a>button {
         align-items: center;
         border: none;
         background: var(--cor-branca);
+
     }
 
     .trace {
@@ -832,5 +887,7 @@ a>button {
         width: 18rem;
     }
 
-
+    #btn-menu.noturno {
+        background-color: black;
+    }
 }
