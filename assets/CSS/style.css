@@ -1,0 +1,836 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,400;0,700;1,400&display=swap');
+
+:root {
+    --cor-principal: rgb(160, 0, 0);
+    --cor-branca: rgb(255, 255, 255);
+    --cor-preta: rgb(0, 0, 0);
+    --cor-principalNoturno: rgb(160, 0, 0);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+    font-size: 5rem;
+}
+
+h2 {
+    font-size: 4.5rem;
+}
+
+h3 {
+    font-size: 4rem;
+}
+
+h4 {
+    font-size: 3.5rem;
+}
+
+h5 {
+    font-size: 2.5rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.landding-page {
+    height: 350vh;
+    width: 100vw;
+    scroll-behavior: smooth;
+
+}
+
+#menu-bar {
+    width: 100vw;
+    height: 5rem;
+    border-bottom: 0.1rem solid var(--cor-principal);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    background-color: var(--cor-branca);
+    z-index: 10;
+}
+
+.container-menu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+#logo img {
+    height: 5rem;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+#logo img:hover {
+    transform: rotateX(360deg);
+}
+
+.items-menu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 45rem;
+}
+
+.list-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+
+}
+
+.list-menu a li {
+    color: var(--cor-principal);
+}
+
+.modo-tela {
+    font-size: 2.5rem;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.modo-tela:hover {
+    color: yellow;
+    text-shadow: 0rem 0rem 0.5rem var(--cor-preta);
+}
+
+.portifolio-rasa {
+    width: 100vw;
+    height: 350vh;
+    padding-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+#home-page {
+    height: 75vh;
+    width: 60%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+}
+
+.text-apresentacao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.text-apresentacao h3 {
+    margin-bottom: 7rem;
+    text-transform: uppercase;
+}
+
+.text-apresentacao h3 span {
+    color: var(--cor-principal);
+}
+
+.text-apresentacao p {
+    font-size: 2rem;
+    letter-spacing: 0.2rem;
+    line-height: 3rem;
+}
+
+.text-apresentacao p span {
+    color: var(--cor-principal);
+    font-weight: 700;
+}
+
+.img-homePage {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.img-homePage img {
+    width: 29rem;
+    height: 29rem;
+    animation-name: cerebro;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes cerebro {
+    0% {
+        height: 29rem;
+        width: 29rem;
+    }
+
+    50% {
+        height: 31rem;
+        width: 31rem;
+    }
+
+    100% {
+        height: 29rem;
+        width: 29rem;
+    }
+}
+
+#sobre-mim {
+    height: 75vh;
+    width: 100vw;
+    background-color: var(--cor-principalNoturno);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.container-one {
+    height: 100%;
+    width: 75vw;
+    display: grid;
+    grid-template-columns: 20rem 1fr;
+    align-items: center;
+    justify-items: center;
+}
+
+.my-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 50%;
+
+}
+
+.my-img img {
+    border-radius: 50%;
+    transition: 0.5s ease-in-out;
+    height: 37rem;
+    width: 28rem;
+
+}
+
+.my-img img:hover {
+    border-top: 0.1rem solid var(--cor-principalNoturno);
+    border-right: 0.1rem solid var(--cor-principalNoturno);
+    box-shadow: -0.5rem 0.5rem 1rem var(--cor-preta);
+    background-color: rgba(0, 0, 0, 0.418);
+    border-radius: 0;
+    height: 40rem;
+    width: 30rem;
+
+}
+
+.my-resumo {
+    width: 100%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.my-resumo h4 {
+    margin-bottom: 7rem;
+    color: var(--cor-branca);
+}
+
+.my-resumo p {
+    font-size: 1.6rem;
+    letter-spacing: 0.3rem;
+    color: var(--cor-branca);
+    border-right: 0.1rem solid var(--cor-preta);
+}
+
+#competencias {
+    display: flex;
+    height: 75vh;
+    width: 75vw;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.grid-list {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    height: 50rem;
+    width: 100%;
+    gap: 2rem;
+
+}
+
+.habilidades {
+    display: grid;
+    grid-template-columns: 12rem 1fr;
+    box-shadow: -0.1rem 0.1rem 1rem var(--cor-preta);
+}
+
+.habilidades ul {
+    font-size: 1.4rem;
+    font-weight: 700;
+    list-style-type: square;
+    line-height: auto;
+}
+
+.habilidades ul li {
+    font-weight: 400;
+    border-bottom: 0.1rem solid var(--cor-principal);
+    height: 6rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding-left: 1rem;
+}
+
+.list-tecnica {
+    width: 12rem;
+}
+
+.habilidades .status {
+    list-style-type: none;
+}
+
+.status li {
+    font-size: 1.4rem;
+}
+
+.personalidade {
+    font-size: 1.4rem;
+    font-weight: 700;
+    list-style-type: square;
+    line-height: auto;
+    box-shadow: -0.1rem 0.1rem 1rem var(--cor-preta);
+
+}
+
+.personalidade ul li {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-weight: 400;
+    border-bottom: 0.1rem solid var(--cor-principal);
+    height: 6rem;
+    padding-left: 1rem;
+}
+
+.projetos {
+    box-shadow: -0.1rem 0.1rem 1rem var(--cor-preta);
+
+}
+
+.container-projetos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 50vw;
+    height: 100%;
+}
+
+.container-projetos h5 {
+    text-align: center;
+}
+
+.ficha-tecnica {
+    width: 100%;
+    height: 30%;
+}
+
+.ficha-tecnica table {
+    width: 100%;
+}
+
+.img-projeto {
+    box-shadow: -0.2rem 0.2rem 0.4rem var(--cor-preta);
+    height: 30vh;
+    width: 25vw;
+    overflow: hidden;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+    transform: rotateX(0);
+}
+
+#tanamao {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+
+
+
+#estudos {
+    height: 75vh;
+    width: 100%;
+    background-color: var(--cor-principalNoturno);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-two {
+    height: 100%;
+    width: 75vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+table {
+    border-collapse: collapse;
+    width: 75%;
+    overflow: auto;
+}
+
+table tr {
+    height: 3.5rem;
+    background-color: var(--cor-branca);
+
+}
+
+table tr th {
+    border-bottom: 0.5rem solid var(--cor-principalNoturno);
+    text-align: start;
+    padding-left: 1rem;
+}
+
+table, td {
+    border-bottom: 0.1rem solid var(--cor-principalNoturno);
+    font-size: 1.2rem;
+    padding-left: 1rem;
+}
+
+
+th {
+    height: 3rem;
+}
+
+#contatos {
+    height: 50vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.mydata {
+    margin: auto auto;
+    display: flex;
+    gap: 2rem;
+}
+
+a>button {
+    visibility: hidden;
+}
+
+.mydata>a {
+    display: block;
+    border: none;
+    /* margin: 3rem auto; */
+    width: 9rem;
+    height: 9rem;
+    cursor: pointer;
+    border-radius: 50%;
+    background-size: 100%;
+}
+
+.mydata .linkedin {
+    background-image: url(../img/logo-linkedin.png);
+    opacity: 50%;
+    background-position: center;
+    transition: all 600ms ease-in-out;
+}
+
+.mydata .whatsapp {
+    background-image: url(../img/wpplogo.png);
+    opacity: 50%;
+    background-position: center;
+    transition: all 600ms ease-in-out;
+}
+
+.mydata .github {
+    background-image: url(../img/github.png);
+    opacity: 50%;
+    background-position: center;
+    transition: all 600ms ease-in-out;
+}
+
+.mydata .instagram {
+    background-image: url(../img/logo-insta.png);
+    opacity: 50%;
+    background-position: center;
+    transition: all 600ms ease-in-out;
+}
+
+.mydata .instagram:hover, .mydata .github:hover, .mydata .whatsapp:hover, .mydata .linkedin:hover {
+    opacity: 100%;
+    border: none;
+}
+
+.email {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--cor-principal);
+    color: var(--cor-branca);
+    width: 100vw;
+    height: 5rem;
+}
+
+
+/*MODO TELA NOTURNO*/
+
+
+
+/*-------------------------------------------------------------*/
+@media (max-width: 1000px) {
+    #home-page {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .text-apresentacao h3 {
+        font-size: 3rem;
+        margin-bottom: 3rem;
+    }
+
+    .text-apresentacao p {
+        font-size: 1.6rem;
+    }
+
+    #competencias {
+        height: 150vh;
+        flex-direction: column;
+
+    }
+
+    .grid-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: 75%;
+    }
+
+    .habilidades {
+        grid-template-columns: auto auto;
+        height: 18rem;
+        width: 100%;
+    }
+
+    .habilidades ul li, .personalidade ul li {
+        height: 2rem;
+    }
+
+    .list-tecnica {
+        width: 100%;
+    }
+
+
+    .personalidade {
+        height: 16rem;
+        width: 100%;
+    }
+
+    .projetos {
+        grid-column: 1 / span 2;
+        height: 50%;
+    }
+
+    .container-projetos {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        justify-items: center;
+    }
+
+    .container-projetos h5 {
+        text-align: center;
+    }
+
+    .ficha-tecnica {
+        height: 100%;
+        width: 90%;
+    }
+
+    .img-projeto {
+        height: 25vh;
+        width: 30vw;
+    }
+
+    @keyframes cerebro {
+        0% {
+            height: 20rem;
+            width: 20rem;
+        }
+
+        50% {
+            height: 22rem;
+            width: 22rem;
+        }
+
+        100% {
+            height: 20rem;
+            width: 20rem;
+        }
+    }
+
+    .my-resumo p {
+        font-size: 1.2rem;
+        letter-spacing: 0.2rem;
+
+    }
+
+    .my-img img {
+        height: 30rem;
+        width: 18rem;
+    }
+
+}
+
+
+@media (max-width: 768px) {
+    .container-one {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .my-resumo p {
+        margin-bottom: 1rem;
+    }
+
+    .my-resumo h4 {
+        margin-bottom: 1rem;
+        font-size: 2.5rem;
+    }
+
+    .projetos {
+        width: 100%;
+        height: 40%;
+    }
+
+    .container-projetos {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-items: center;
+        gap: 1rem;
+        height: 100%;
+    }
+
+    .personalidade {
+        overflow: auto;
+    }
+
+    .personalidade ul li {
+        height: 2.5rem;
+        font-size: 1.1rem;
+    }
+
+    .ficha-tecnica {
+        height: 15rem;
+        overflow-y: scroll;
+        border: 0.2rem solid var(--cor-principal);
+    }
+
+    .ficha-tecnica table {
+        width: 100%;
+
+    }
+
+    .mydata>a {
+        width: 7rem;
+        height: 7rem;
+
+    }
+
+    .mydata a {
+        background-size: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .container-two {
+        height: 40rem;
+        overflow-y: scroll;
+        align-items: flex-start;
+    }
+
+    .list-tecnica li {
+
+        font-size: 1.1rem;
+    }
+
+    .status li {
+        font-size: 1.1rem;
+    }
+
+    #logo {
+        margin-left: 1rem;
+    }
+
+    .modo-tela {
+        margin-right: 1rem;
+    }
+
+    .list-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        position: absolute;
+        top: 5rem;
+        left: 0;
+        width: 100vw;
+        height: 0;
+        background-color: var(--cor-principalNoturno);
+        visibility: hidden;
+        overflow-y: auto;
+        transition: 0.3s;
+    }
+
+    .list-menu.active {
+        visibility: visible;
+        height: 50vh;
+    }
+
+    .list-menu a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+        border-bottom: 0.1rem solid var(--cor-principal);
+    }
+
+    .list-menu a li {
+        color: var(--cor-branca);
+    }
+
+
+    #btn-menu {
+        height: 4rem;
+        width: 4rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        border: none;
+        background: var(--cor-branca);
+    }
+
+    .trace {
+        width: 100%;
+        height: 0.3rem;
+        border: 0.1rem solid var(--cor-principal);
+        background-color: var(--cor-branca);
+        transition: all 0.3s ease-in-out;
+    }
+
+    #btn-menu.active {
+        position: relative;
+    }
+
+    #btn-menu.active>.trace1 {
+        visibility: hidden;
+    }
+
+    #btn-menu.active>.trace2 {
+        height: 0.4rem;
+        transform: rotate(135deg);
+        position: absolute;
+        top: 1.7rem;
+    }
+
+    #btn-menu.active>.trace3 {
+        height: 0.4rem;
+        transform: rotate(-135deg);
+        position: absolute;
+        bottom: 1.9rem;
+    }
+
+    .text-apresentacao h3 {
+        font-size: 3rem;
+    }
+
+    .text-apresentacao p {
+        font-size: 1.6rem;
+        letter-spacing: 0.2rem;
+        line-height: 1.7rem;
+
+    }
+
+    .my-resumo {
+        height: 20rem;
+        overflow-y: scroll;
+        justify-content: flex-start;
+    }
+
+    @keyframes cerebro {
+        0% {
+            height: 20rem;
+            width: 20rem;
+        }
+
+        50% {
+            height: 22rem;
+            width: 22rem;
+        }
+
+        100% {
+            height: 20rem;
+            width: 20rem;
+        }
+    }
+
+    .my-img img {
+        height: 28rem;
+        width: 18rem;
+    }
+
+
+}
